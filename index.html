@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>chess Online</title>
+    <style>
+        .table td{
+            text-align: center;
+        }
+
+        .table a{
+            display: block;
+            text-decoration: none;
+        }
+
+        .table{
+            width: 300px;
+        }
+
+        td{
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container boardList">
+        <span class="status">Status: Offline<br></span>
+        <button class="btn btn-danger newBoard"> Create a New Board</button>
+    </div>
+    <div class="container board">
+        <div class="row">
+            <div class="col-md-7">
+                <input type="button" class="btn btn-success player-x" value="player X">
+                <input type="button" class="btn btn-success player-o" value="player O">
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div col="col-md-7">
+                <table class="table table-bordered table-dark">
+                        <caption><button class="btn btn-danger get-ready">click to get ready</button></caption>
+                        <tr>
+                            <td><a href="#" id="1" class="box-1"></a></td>
+                            <td><a href="#" id="2" class="box-2"></a></td>
+                            <td><a href="#" id="4" class="box-3"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" id="8" class="box-4"></a></td>
+                            <td><a href="#" id="16" class="box-5"></a></td>
+                            <td><a href="#" id="32" class="box-6"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" id="64" class="box-7"></a></td>
+                            <td><a href="#" id="128" class="box-8"></a></td>
+                            <td><a href="#" id="256" class="box-9"></a></td>
+                        </tr>
+                    </table><button class="btn btn-danger exit-board">Exit from board</button>
+            </div>
+            <div class="col-md-5 message">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container boardList" style="border: 1px red solid; width:300px; margin-left: 127px;">
+            <span class="title">Active Board</span>
+            <ul class="list-group available-board">
+            </ul>
+    </div>
+    <br>
+    <div class="container playerList" style="border: 1px red solid; width:300px; margin-left: 127px;">
+        <span class="title">Players online</span>
+        <ul class="list-group online-players">
+        </ul>
+    </div>
+
+    <div class="mock">
+        <input class="mocker" value="" type="text">
+        <input type="submit" value="Click here" class="click">
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/tether.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

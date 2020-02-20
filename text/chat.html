@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing Ratchet Server</title>
+</head>
+<body>
+    <input id="message"></input><button id="send">send</button>
+    <script>
+        var conn = new WebSocket('ws://localhost:8080');
+        conn.onopen = function(e){
+            console.log("connection established!");
+            conn.send('hello');
+        }
+
+        conn.onmessage = function(e){
+            console.log(e.data);
+        }
+
+        document.getElementById('send').onclick = function(e){
+            conn.send(document.getElementById('message').value);
+            switch(true){
+            }
+        }
+    </script>
+</body>
+</html>

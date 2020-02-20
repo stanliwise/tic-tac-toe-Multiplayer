@@ -1,0 +1,103 @@
+select online option(html)
+connect player online.... 
+    *connect client to server
+can view game of other players (optional)...
+
+create a new board (optional)
+    *board object..
+        -list of viewers
+        -list of player (two);
+        -active
+            How to update the board
+        -on message recieved: 
+
+        #build a list of other player views
+click on the player you want to play with...
+    #if player accepts...
+    Then start to play.
+
+
+if player create board.. player cannot leave board state
+
+objects
+--------
+player 
+board
+
+tag
+-----
+b-create - to start a new game response: board-details
+b-n-exit - away from board remove-message to other and exit for player
+offline - disconnect A remove message for others and 
+b-m-v - the move played.. m stands for move, v stands for black or white
+b-ready - for seek- move becomes possible
+b-sit - sit on a table
+b-msg-(content) - a chat message sent by a user. *later version
+b-resign - new state of message to everyone
+
+response tag
+-----
+s-m-x - x stands for number
+s-u-m - u stands for update message, m stands for message
+
+always switch turns for players to play first.
+
+javascript tags
+if either you or your opponent makes a move....logic is verified by php function and if correct,
+ board is updated on server and board message is sent to subscribers.
+
+ After this next things would be scores and the rest..
+
+ board page
+ ----------
+ Update board page
+
+ tag This are response tags gotten server
+ ----
+ new-table-name
+ delele-table-name
+
+
+ Build the interface
+ Create the logic
+    classes
+    board functions (copy it);
+
+    
+
+
+
+
+board class
+    const
+    WIN
+    LOSS
+    DRAW
+
+    id
+    white
+    black
+    state
+    createds
+    players
+
+    destroy()
+    getplayers()
+    removeplayer()
+    addplayer()
+    getState()
+
+    validate_move()
+    add_move();
+
+
+    player
+    id
+    name
+    score
+
+    destroy()
+    getname()
+    getscore()
+
+    
