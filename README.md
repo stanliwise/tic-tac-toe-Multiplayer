@@ -1,5 +1,7 @@
 # tic-tac-toe-Multiplayer
 
+This Project enhances the Tic-tac-toe game into a multiplayer game over the network powered by Webhsocket to enable realtime update and play by two players
+
 using RatchetIO [Ratchet](http://socketo.me/)
 
 To run
